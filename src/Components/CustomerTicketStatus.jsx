@@ -37,30 +37,30 @@ const CustomerTicketStatus = ({fetchTicketData}) => {
 
   return (
    <div>
-        {/* here props handling adding number of card */}
-        <ProgressResolve selectedCard={selectedCard} resolveCard={resolveCard} />
+        <div className="container mx-auto">
+            <ProgressResolve selectedCard={selectedCard} resolveCard={resolveCard} />
 
-        <div className='my-5 pt-6 flex gap-9 flex-wrap'>
-            <div>
-                <h4 className='text-[1.1rem] font-semibold'>Customer Tickets</h4>
+            <div className='my-5 pt-6 flex gap-9 flex-wrap'>
+                <div>
+                    <h4 className='text-[1.1rem] font-semibold'>Customer Tickets</h4>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-                    {ticketData.map((ticket) => (
-                        <CardDesign 
-                            key = {ticket.id} 
-                            ticket = {ticket}
-                            onClick = {handleAddToTask}
-                        />
-                    ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                        {ticketData.map((ticket) => (
+                            <CardDesign 
+                                key = {ticket.id} 
+                                ticket = {ticket}
+                                onClick = {handleAddToTask}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                <div>
+                    <TaskStatus  selectedCard={selectedCard} onComplete={handleComplete}  />
+                    <ResolveTask resolveCard={resolveCard} />
                 </div>
             </div>
-
-            {/* status section */}
-            <div>
-                <TaskStatus  selectedCard={selectedCard} onComplete={handleComplete}  />
-                <ResolveTask resolveCard={resolveCard} />
-            </div>
-        </div>
+        </div>        
    </div>
   )
 }
