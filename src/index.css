@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+    background-color: #e9e9e9 !important;
+    color: black;
+}
+
+.progress-card 
+{
+    background: linear-gradient(125.04deg, #632EE3 5.68%, #9F62F2 88.38%);
+}
+
+.resolve-card 
+{
+    background: linear-gradient(90deg, #54CF68 9.6%, #00827A 92.23%);
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Website login issue",
+    "description": "Customer is unable to log in to their account. They have tried resetting the password but it's not working.",
+    "customer": "John Doe",
+    "priority": "High priority",
+    "status": "open",
+    "createdAt": "2025-05-18T10:30:00Z",
+    "number": "#1001"
+  },
+  {
+    "id": 2,
+    "title": "Payment gateway error",
+    "description": "Users are receiving a 'Transaction failed' error when attempting to make a purchase.",
+    "customer": "Jane Smith",
+    "priority": "Medium priority",
+    "status": "open",
+    "createdAt": "2025-08-01T09:00:00Z",
+    "number": "#1002"
+  },
+  {
+    "id": 3,
+    "title": "Feature request: Dark mode",
+    "description": "Customer would like to see a dark mode option for the application to reduce eye strain.",
+    "customer": "Peter Jones",
+    "priority": "Low priority",
+    "status": "open",
+    "createdAt": "2025-04-22T14:15:00Z",
+    "number": "#1003"
+  },
+  {
+    "id": 4,
+    "title": "Report generation is slow",
+    "description": "The weekly sales report is taking an unusually long time to generate. It's causing delays for the sales team.",
+    "customer": "Sarah Wilson",
+    "priority": "Medium priority",
+    "status": "open",
+    "createdAt": "2025-09-15T11:45:00Z",
+    "number": "#1004"
+  },
+  {
+    "id": 5,
+    "title": "Account verification link expired",
+    "description": "Customer created an account but the verification link sent via email has expired. They need a new one.",
+    "customer": "Michael Brown",
+    "priority": "High priority",
+    "status": "open",
+    "createdAt": "2025-06-03T08:20:00Z",
+    "number": "#1005"
+  },
+  {
+    "id": 6,
+    "title": "Incorrect product pricing",
+    "description": "The price for product 'XYZ' on the website is different from the price in the backend system.",
+    "customer": "Emily Davis",
+    "priority": "Low priority",
+    "status": "open",
+    "createdAt": "2025-07-11T16:00:00Z",
+    "number": "#1006"
+  },
+  {
+    "id": 7,
+    "title": "Mobile app crashes on startup",
+    "description": "The mobile application is crashing immediately after being opened on multiple Android devices.",
+    "customer": "Chris Johnson",
+    "priority": "High priority",
+    "status": "open",
+    "createdAt": "2025-09-20T09:30:00Z",
+    "number": "#1007"
+  },
+  {
+    "id": 8,
+    "title": "Missing order history",
+    "description": "Customer's order history is not visible in their account. They need to see a list of their past purchases.",
+    "customer": "Laura Miller",
+    "priority": "Medium priority",
+    "status": "open",
+    "createdAt": "2025-02-28T13:00:00Z",
+    "number": "#1008"
+  },
+  {
+    "id": 9,
+    "title": "Email notification not received",
+    "description": "Customer did not receive the order confirmation email after a successful purchase.",
+    "customer": "David Garcia",
+    "priority": "Low priority",
+    "status": "open",
+    "createdAt": "2025-03-17T10:00:00Z",
+    "number": "#1009"
+  },
+  {
+    "id": 10,
+    "title": "Website search functionality broken",
+    "description": "The search bar on the website is not returning any results, even for known products.",
+    "customer": "Olivia Taylor",
+    "priority": "High priority",
+    "status": "open",
+    "createdAt": "2025-09-08T11:00:00Z",
+    "number": "#1010"
+  },
+  {
+    "id": 11,
+    "title": "Password reset email not sending",
+    "description": "When a customer requests a password reset, the email is not being sent.",
+    "customer": "Daniel Lee",
+    "priority": "Medium priority",
+    "status": "open",
+    "createdAt": "2025-01-25T09:45:00Z",
+    "number": "#1011"
+  },
+  {
+    "id": 12,
+    "title": "Confusing checkout process",
+    "description": "Customer found the checkout process to be overly complicated and difficult to complete.",
+    "customer": "Jessica Martinez",
+    "priority": "Low priority",
+    "status": "open",
+    "createdAt": "2025-08-30T15:30:00Z",
+    "number": "#1012"
+  }
+]
