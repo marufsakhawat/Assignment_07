@@ -1,7 +1,8 @@
 import React from 'react';
-import { image } from '../assets/assets';
-
-
+import iFacebook from '../assets/i-facebook.png';
+import iTwitter from '../assets/i-twitter.png';
+import iLinkedin from '../assets/i-linkdien.png';
+import iMessage from '../assets/i-message.png';
 const Footer = () => {
   return (
   <div>
@@ -10,7 +11,7 @@ const Footer = () => {
             <div class="grid md:grid-cols-5 gap-8">
                 <div>
                     <h3 class="text-white font-semibold mb-2">CS — Ticket System</h3>
-                    <p class="text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p class="text-sm">Barmuda is simply wonder of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-semibold mb-2">Company</h4>
@@ -39,10 +40,10 @@ const Footer = () => {
                 <div>
                     <h4 class="text-white font-semibold mb-2">Social Links</h4>
                     <ul class="space-y-1 text-sm">
-                        <li>@CS — Ticket System</li>
-                        <li>@CS — Ticket System</li>
-                        <li>@CS — Ticket System</li>
-                        <li>support@cst.com</li>
+                        <li className='flex gap-2'><img src={iFacebook}/><span>@CS — Ticket System</span></li>
+                        <li className='flex gap-2'><img src={iTwitter}/><span>@CS — Ticket System</span></li>
+                        <li className='flex gap-2'><img src={iLinkedin}/><span>@CS — Ticket System</span></li>
+                        <li className='flex gap-2'><img src={iMessage}/><span>support@cst.com</span></li>
                     </ul>
                 </div>
             </div>

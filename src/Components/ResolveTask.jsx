@@ -9,7 +9,7 @@ const ResolveTask = ({ resolveCard = [] }) => {
 
       {
         resolveCard.map(ticket => (
-          <div key={ticket.id} className='bg-purple-100 shadow w-[300px] px-4 py-5 mt-4 rounded'>
+          <div key={ticket.id} className='bg-purple-100 shadow w-[100%] px-4 py-5 mt-4 rounded'>
             <p className='font-semibold text-purple-700'>{ticket.title}</p>
 
             <div className='flex justify-between'>

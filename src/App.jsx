@@ -18,7 +18,7 @@ const App = () => {
     <div className=''>
       <Navbar/>
 
-      <div className='px-5 md:px-12'>
+      <div className='py-10 px-7 md:px-12'>
 
         <Suspense fallback={<span className="loading loading-spinner text-neutral"></span>}>
           <CustomerTicketStatus fetchTicketData={fetchTicketData}/>
