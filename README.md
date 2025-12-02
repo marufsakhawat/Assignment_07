@@ -1,120 +1,62 @@
-Q1. What is JSX, and why is it used?
+1. What is JSX, and why is it used?
 
-Ans: JSX is JavaScript XML. It's look like HTML but it is actually JavaScript Code..
+JSX stands for JavaScript XML. It lets us write HTML-like code directly inside JavaScript.
+Even though it looks like HTML, it actually becomes JavaScript when React processes it.
 
-    Example: 
-      
-       const element = <h1>Hello, world!</h1>;
+JSX is used because it:
 
-JSX is used for easy to access UI and more readable
+Makes UI code much easier to understand
 
-    Example: 
+Allows writing dynamic content inside curly braces { }
 
-        const name = "Ehasun";
-        const element = <h1>Hello, {name}!</h1>;
+Helps combine HTML structure and JavaScript logic in one place
 
+2. What is the difference between State and Props?
 
-Q2. What is the difference between State and Props?
+State is data that a component owns and controls. It can change while the app is running.
 
-<table border="1" cellpadding="10" cellspacing="0">
-  <tr>
-    <th>Feature</th>
-    <th>Props</th>
-    <th>State</th>
-  </tr>
-  <tr>
-    <td>Definition</td>
-    <td>Data passed from parent to child component</td>
-    <td>Data managed inside the component</td>
-  </tr>
-  <tr>
-    <td>Who owns it?</td>
-    <td>Parent component</td>
-    <td>The component itself</td>
-  </tr>
-  <tr>
-    <td>Can it be changed?</td>
-    <td>No (read-only)</td>
-    <td>Yes (can be updated with setState/useState)</td>
-  </tr>
-  <tr>
-    <td>Purpose</td>
-    <td>To pass data and configure a component</td>
-    <td>To store information that can change over time</td>
-  </tr>
-  <tr>
-    <td>Example</td>
-    <td><code>&lt;User name="Ehasun" /&gt;</code></td>
-    <td><code>const [count, setCount] = useState(0);</code></td>
-  </tr>
-</table>
+Props are values passed from a parent component to a child component. They are read-only, meaning the child cannot change them.
+
+In short:
+
+Props = external, fixed data
+
+State = internal, changeable data
+
+3. What is the useState hook, and how does it work?
+
+useState is a built-in React Hook that lets functional components have their own state.
+
+When you call useState, it returns:
+
+The current state value
+
+A function to update that value
+
+Example:
+
+const [count, setCount] = useState(0);
 
 
-Q3. What is the useState hook, and how does it work?
+Here, count is the value, and setCount updates it.
 
-Ans: useState is ReactHook. it's used for managed our state in our functional components
+4. How can you share state between components in React?
 
-when we use useState it should have a initial value. 
-It's gives use tow things 
+To share state between components, you usually lift the state up to the closest parent component.
 
-1. The current state value
-2. A function to update that value
+The parent holds the state and passes it down to children using props.
+This way, multiple components can use or update the same data.
 
-    Example: 
+Other state-sharing methods:
 
-        import { useState } from "react";
+React Context → for global or app-wide sharing
 
-        function Counter() {
-            const [count, setCount] = useState(0);
+Redux / Zustand → for larger projects with complex state
 
-            return (
-                <div>
-                <p>Count: {count}</p>
-                <button onClick={() => setCount(count + 1)}>Increase</button>
-                </div>
-            );
-        }
+5. How is event handling done in React?
 
+React handles events almost like JavaScript but with a few differences:
 
-Q4. How can you share state between components in React?
+Event names use camelCase (e.g., onClick instead of onclick)
 
-Ans: If two components need the same state → put that state in their closest common parent.
-
-    Example: 
-
-        function Parent() {
-            const [count, setCount] = useState(0);
-
-            return (
-                <div>
-                <ChildA count={count} />
-                <ChildB setCount={setCount} />
-                </div>
-            );
-            }
-
-            function ChildA({ count }) {
-             return <p>Count is: {count}</p>;
-            }
-
-            function ChildB({ setCount }) {
-                return <button onClick={() => setCount(c => c + 1)}>Increase</button>;
-        }
-
-
-Q5. How is event handling done in React?
-
-Ans: React handles events similar to JavaScript, but with a few key differences.
-
-    Example: 
-
-        In html
-
-            <button onclick="handleClick()">Click</button>
-
-        In React 
-
-            <button onClick={handleClick}>Click</button>
-
-
-
+You pass a function, not a string

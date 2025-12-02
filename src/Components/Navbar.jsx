@@ -7,24 +7,71 @@ const Navbar = () => {
         
         <div class="bg-white-100 shadow-lg">
             <div class="container mx-auto">
-                <nav class="px-8 py-4 flex justify-between items-center">
-                    <h1 class="md:text-xl text-sm font-bold">CS — Ticket System</h1>
-                    <div class="md:flex items-center gap-5">
-                        <a href="#" class="text-black-500">Home</a>
-                        <a href="#" class="text-black-500">FAQ</a>
-                        <a href="#" class="text-black-500">Changelog</a>
-                        <a href="#" class="text-black-500">Blog</a>
-                        <a href="#" class="text-black-500">Download</a>
-                        <a href="#" class="text-black-500">Contact</a>
-                        <button class="bg-gradient-to-br from-indigo-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:cursor-pointer">+ New Ticket</button>
-                    </div>
-                    <div class="block md:hidden">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0V0z"></path>
-                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h16H3z"></path>
-                        </svg>
-                    </div>
-                </nav>
+                <nav className="navbar bg-base-100 px-8 py-4">
+      {/* Logo */}
+      <div className="navbar-start">
+        <a className="text-sm md:text-xl font-bold">CS — Ticket System</a>
+      </div>
+
+      {/* Desktop Menu */}
+      <div className="navbar-center hidden md:flex">
+        <ul className="menu menu-horizontal gap-5 text-black">
+          <li><a>Home</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Changelog</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Download</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+
+      {/* New Ticket Button (Desktop only) */}
+      <div className="navbar-end hidden md:flex">
+        <button className="bg-gradient-to-br from-indigo-500 to-purple-500 text-white font-semibold px-5 py-3 rounded-lg hover:cursor-pointer">
+          + New Ticket
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      <div className="navbar-end md:hidden">
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16" 
+              />
+            </svg>
+          </label>
+
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[999] p-4 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Home</a></li>
+            <li><a>FAQ</a></li>
+            <li><a>Changelog</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Download</a></li>
+            <li><a>Contact</a></li>
+            <li>
+              <button className="bg-gradient-to-br from-indigo-500 to-purple-500 text-white font-semibold px-4 py-2 rounded-lg mt-2">
+                + New Ticket
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
             </div>
         </div>
         
