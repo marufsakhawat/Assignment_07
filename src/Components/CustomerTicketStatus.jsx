@@ -40,11 +40,11 @@ const CustomerTicketStatus = ({fetchTicketData}) => {
         <div className="container mx-auto">
             <ProgressResolve selectedCard={selectedCard} resolveCard={resolveCard} />
 
-            <div className='my-5 pt-6 flex gap-9 flex-wrap'>
-                <div>
+            <div className='my-5 pt-6 flex gap-5 flex-wrap'>
+                <div className='md:w-[76%]'>
                     <h4 className='text-[1.1rem] font-semibold'>Customer Tickets</h4>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
                         {ticketData.map((ticket) => (
                             <CardDesign 
                                 key = {ticket.id} 
@@ -55,7 +55,7 @@ const CustomerTicketStatus = ({fetchTicketData}) => {
                     </div>
                 </div>
 
-                <div>
+                <div className='md:w-[20%]'>
                     <TaskStatus  selectedCard={selectedCard} onComplete={handleComplete}  />
                     <ResolveTask resolveCard={resolveCard} />
                 </div>

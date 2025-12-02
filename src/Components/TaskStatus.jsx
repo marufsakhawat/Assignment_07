@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const TaskStatus = ({ selectedCard, onComplete }) => {
   return (
     <div>
-      <h3 className='text-[1.2rem] font-semibold'>Task Status</h3>
+      <h4 className='text-[1.2rem] font-semibold'>Task Status</h4>
 
       <div>
         {selectedCard.length === 0 && (
@@ -16,7 +16,7 @@ const TaskStatus = ({ selectedCard, onComplete }) => {
         {selectedCard.map((ticket) => (
           <div
             key={ticket.id}
-            className='bg-white shadow w-[300px] px-4 py-5 mt-4'
+            className='bg-white shadow w-[100%] px-3 py-5 mt-3 rounded-sm'
           >
             <p className='font-semibold'>{ticket.title}</p>
 

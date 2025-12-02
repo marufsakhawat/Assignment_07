@@ -65,7 +65,7 @@ const CardDesign = ({ ticket, onClick }) => {
 
 
   return (
-    <div className="card w-79 md:w-96 bg-base-100 card-xs shadow-sm p-3 cursor-pointer" onClick={handleStatus}>
+    <div className="card w-[100%] md:w-[98%] bg-base-100 card-xs shadow-sm p-4 cursor-pointer" onClick={handleStatus}>
       <div className="card-bodies">
         <div className='flex justify-between items-center w-full'>
           <h2 className="card-title flex-1">{ticket.title}</h2>
